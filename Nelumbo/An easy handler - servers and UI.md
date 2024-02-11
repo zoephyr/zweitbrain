@@ -50,3 +50,7 @@ Go is possible to write into Cloudflare Workers, but poses an issue. It must FIR
 
 # Compromise
 By investigating GoFiber further in the future, we could look at finding a more efficient way. For now, using Hono would be "good enough", and lets the project live as JUST the API side of the CMS for anyone to use in CF. Using TS and Hono will get us the edge over microfeed that we are looking for in this project, in my opinion. By settling on a TS based server, it can possibly be deployed as an API nearly anywhere way more efficiently. One could look at porting the patterns to adapters that work in any environment, and provide CMS based on the way you want it. To start, the API should be focused on the CFWorkers platform - this is the target for the project.
+
+# Further conclusions
+
+Starting with Hono is a safe bet for a fairly efficient framework. For further speed benefits, one could look at RUST. Investigating Rust as a solution could involve using a web framework to write an efficient file server, while targeting WASM for full compatibility. 
