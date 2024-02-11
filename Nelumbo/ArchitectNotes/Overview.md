@@ -18,7 +18,12 @@
    6. Must refer to R2 allowed filetypes - we may need another abstraction layer here.
    7. Must be able to talk out to [`vps-open-cms`/`vps-nelumbo-server`]
 3. Sapphire Bot on VPS [`vps-nelumbo-bot`]
+   1. Discord SapphireJS framework to enable community management
+   2. Roles from Discord can get updated/imported to database of permissions and sessions
+   3. This 
 4. MinIO & S3 API layer on VP [`vps-nelumbo-server`]
    1. Possibly written as a simple Hono w/ Auth server 
       1. Could tilt to express if need be
       2. Possibly use Rust->WASM here if it benefits 
+      3. Integrate Database API layer for auth provisioning for Discord bot and identity management from `cf-open-cms`
+      4. Database will hold a structure of the "filesytem" that is backed by cached local S3-compat-api.
