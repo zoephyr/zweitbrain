@@ -23,4 +23,9 @@ What we'll need to do is build a testing harness that allows a separate Vercel b
 - Get a GraphQL server running with Remix, so that GraphQL request can hit an endpoint, and make queries/mutations on the fileserver.
 
 
+## Getting Going:
+https://developers.cloudflare.com/d1/examples/d1-and-remix/
 
+Refer to link above for getting started with D1, R2, and KV in remix.
+
+Write a handler that exposes an API for any consumer to CRUD files on CFWP.
