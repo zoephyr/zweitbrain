@@ -43,3 +43,10 @@ Some advantages here are that
 6. Consumers can be in any hosting solution - as long as they can hit the API back and forth with auth, they'll get their data properly
 
 This should be a pretty clean setup, if I'm correct.
+
+# Update to findings
+
+Go is possible to write into Cloudflare Workers, but poses an issue. It must FIRST be compiled down to WebAssembly, which creates a real problem for potentially using it with GoFiber. We'd need to do some magic.... is it worth it to actually do this in Go? Perhaps with Hono alone we can get our ⚡ performance while reducing the complexity and overhead
+
+# Compromise
+By investigating GoFiber further in the future, we could look at finding a more efficient way. For now, using Hono would be "good enough", and lets the project live as JUST the API side of the CMS for anyone to use in CF. Using TS and Hono will get us the edge over microfeed that we are looking for in this project, in my opinion. By settling on a TS based server, it can possibly be deployed as an API nearly anywhere way more efficiently. One could look at porting the patterns to adapters that work in any environment, and provide CMS based on the way you want it. To start, the API should be focused on the CFWorkers platform - this is the target for the project.
